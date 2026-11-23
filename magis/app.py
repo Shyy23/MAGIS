@@ -1,0 +1,2 @@
+def jalankan():
+    print("===== MAGIS =====")
