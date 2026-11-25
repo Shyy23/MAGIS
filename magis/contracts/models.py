@@ -17,8 +17,8 @@ class Misi:
     description: str
     type: TipeMisi
     id_tema: str
-    id_loot: int | None = None
-    id_prasyarat: int | None = None # None = misi pertama
+    id_loot: str | None = None
+    id_prasyarat: str | None = None # None = misi pertama
 
 @dataclass
 class Player:
