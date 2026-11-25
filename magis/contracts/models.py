@@ -4,6 +4,11 @@ from dataclasses import dataclass
 from typing import Literal
 
 TipeMisi = Literal['eksplorasi', 'boss']
+TipeEvent = Literal['eksplorasi', 'boss']
+StatusMisi = Literal['ongoing', 'selesai', 'gagal']
+StatusRuangan = Literal['gagal', 'berhasil']
+JenisSoal = Literal['event', 'skill']
+StatusBattle = Literal['ongoing', 'victory', 'lose', 'fled']
 
 @dataclass(frozen=True)
 class Tema:
