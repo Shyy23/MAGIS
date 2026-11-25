@@ -1,7 +1,7 @@
 [
   {
     "id_misi": "M01",
-    "nama": "Hutan Persamaan (Pintu Masuk)",
+    "name": "Hutan Persamaan (Pintu Masuk)",
     "description": "Hutan tempat monster tinggal",
     "type": "eksplorasi",
     "id_tema": "T01"
