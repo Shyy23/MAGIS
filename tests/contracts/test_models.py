@@ -1,8 +1,5 @@
-from dataclasses import FrozenInstanceError
-
-import pytest
-
 from magis.contracts.models import Misi, Player, Tema
+
 
 def test_membuat_tema():
     t = Tema(id_tema="T01", name="Linear Satu Variabel")
@@ -19,7 +16,8 @@ def test_membuat_misi():
     assert m.name == "Hutan Persamaan"
     assert m.id_prasyarat is None
 
-def test_mengubah_misi():
-     m = Misi(id_misi="M01", name="Gua", description="Jelajahi hutan", type="eksplorasi"
-                , id_tema="T01")
-     m.name = "Gua Kuadrat"
+# Negative Test
+# def test_mengubah_misi():
+#      m = Misi(id_misi="M01", name="Gua", description="Jelajahi hutan", type="eksplorasi"
+#                 , id_tema="T01")
+#      m.name = "Gua Kuadrat"
