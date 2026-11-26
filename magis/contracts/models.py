@@ -36,4 +36,42 @@ class Player:
     mp: int = 100
     atk: int = 10
 
+@dataclass
+class Item:
+    id_item : str
+    name : str
+    effect_value : int
+    description : str
+
+@dataclass
+class Monster:
+    id_monster : str
+    name : str
+    hp : int = 100
+    mp : int | None = None
+    atk : int = 10
+    level : int = 1
+
+@dataclass
+class Boss:
+    id_boss: str
+    name : str
+    hp : int = 100
+    mp : int | None = None
+    atk : int = 10
+    level : int = 1
+
+@dataclass
+class Loot:
+    id_loot : str
+    gold_min : int
+    gold_max : int
+    exp_dasar : int
+@dataclass
+class Aturan:
+    id_aturan : str
+    name : str
+    value : int
+    
+
 
