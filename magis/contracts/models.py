@@ -10,11 +10,13 @@ StatusRuangan = Literal['gagal', 'berhasil']
 JenisSoal = Literal['event', 'skill']
 StatusBattle = Literal['ongoing', 'victory', 'lose', 'fled']
 
+
+# ------------- Soal ----------------
 @dataclass(frozen=True)
 class Tema:
     id_tema: str
     name: str
-
+# ------------- Misi & Ruangan ----------------
 @dataclass(frozen=True)
 class Misi:
     id_misi: str
@@ -25,6 +27,21 @@ class Misi:
     id_loot: str | None = None
     id_prasyarat: str | None = None # None = misi pertama
 
+# ------------- Item dan Loot ----------------
+@dataclass(frozen=True)
+class Item:
+    id_item : str
+    name : str
+    effect_value : int
+    description : str
+
+@dataclass(frozen=True)
+class Loot:
+    id_loot : str
+    gold_min : int
+    gold_max : int
+    exp : int
+# ------------- Karakter ----------------
 @dataclass
 class Player:
     id_player: str
@@ -36,14 +53,7 @@ class Player:
     mp: int = 100
     atk: int = 10
 
-@dataclass
-class Item:
-    id_item : str
-    name : str
-    effect_value : int
-    description : str
-
-@dataclass
+@dataclass(frozen=True)
 class Monster:
     id_monster : str
     name : str
@@ -52,7 +62,7 @@ class Monster:
     atk : int = 10
     level : int = 1
 
-@dataclass
+@dataclass(frozen=True)
 class Boss:
     id_boss: str
     name : str
@@ -61,13 +71,11 @@ class Boss:
     atk : int = 10
     level : int = 1
 
-@dataclass
-class Loot:
-    id_loot : str
-    gold_min : int
-    gold_max : int
-    exp_dasar : int
-@dataclass
+# ------------- Skill ----------------
+
+
+# ------------- Event & Aturan ----------------
+@dataclass(frozen=True)
 class Aturan:
     id_aturan : str
     name : str
