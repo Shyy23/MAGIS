@@ -4,6 +4,7 @@ from typing import Protocol
 
 from magis.contracts.models import Misi
 
+
 class MisiRepository(Protocol):
     def daftar(self) -> list[Misi]:
         "Semua misi, urut menurut id_misi."
